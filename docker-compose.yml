@@ -1,0 +1,53 @@
+version: "3.8"
+services:
+
+  front: # reverse proxy nginx that routes to `web` or `api`
+    container_name: front
+    build: ./front
+    depends_on:
+      - web
+      - api
+    networks:
+      - frontend
+    ports:
+      - "80:80"
+
+  web: # react app, static assets
+    container_name: web
+    build: ./web
+    depends_on:
+      - api
+    networks:
+      - frontend
+    expose:
+      - "3000"
+    volumes:
+      - ./web:/app
+
+  api: # node express backend
+    container_name: api
+    build: ./api
+    depends_on:
+      - data
+    networks:
+      - frontend
+      - backend
+    expose:
+      - "3001"
+    environment:
+      REDIS_HOST: data
+      REDIS_PORT: 6379
+    volumes:
+      - ./api:/app
+
+  data: # redis storage
+    container_name: data
+    image: redis
+    networks:
+      - backend
+    expose:
+      - "6379"
+
+networks:
+  frontend:
+  backend:

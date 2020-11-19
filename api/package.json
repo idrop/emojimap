@@ -1,0 +1,22 @@
+{
+  "name": "back",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "@types/cookie-parser": "^1.4.2",
+    "@types/morgan": "^1.9.2",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-validator": "^6.6.1",
+    "georedis": "^3.1.3",
+    "morgan": "~1.9.1",
+    "pg": "^8.5.1",
+    "redis": "^3.0.2",
+    "uuid": "^8.3.1",
+    "uuid4": "^2.0.2"
+  }
+}
