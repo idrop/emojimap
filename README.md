@@ -31,4 +31,4 @@ To learn react, node and redis 🤷
 
 ## Issues
 
-There are many, please see [Issues](./issues).
+There are many, please see [Issues](https://github.com/idrop/emojimap/issues).
