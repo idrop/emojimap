@@ -1,6 +1,8 @@
 ## What
 Save emojis to a map!
 
+![Example image showing a map with emojis](eg.png)
+
 ## Why 
 
 To learn react, node and redis 🤷
@@ -26,3 +28,7 @@ To learn react, node and redis 🤷
 * Add `127.0.0.1 www.localhost` to `/etc/hosts`.
 * Run `docker-compose up --build -d`
 * Visit http://www.localhost
+
+## Issues
+
+There are many, please see [Issues](./issues).
